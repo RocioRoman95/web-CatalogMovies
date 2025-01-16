@@ -1,0 +1,9 @@
+<div class="movie-detail-container" *ngIf="movie">
+  <h1 appHighlight class="movie-title">{{ movie.title }}</h1>
+  <div class="movie-image-container">
+      <img [src]="movie.imageUrl" alt="{{ movie.title }}" class="movie-detail-image" />
+  </div>
+  <p><strong>Release Date:</strong> {{ movie.releaseDate }}</p>
+  <p><strong>Description:</strong> {{ movie.description }}</p>
+  <p><strong>Genre:</strong> {{ movie.genre }}</p>
+</div>

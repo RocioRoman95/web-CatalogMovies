@@ -1,0 +1,13 @@
+<div class="movie-list-container">
+
+  <h1>Movie List</h1>
+  <ul>
+    <li *ngFor="let movie of movies" [ngClass]="{'recent-movie': isRecent(movie.releaseDate)}">
+      <h3>{{ movie.title }}</h3>
+      <img [src]="movie.imageUrl" alt="{{ movie.title }}" class="movie-image" />
+      <p>Release Date: {{ movie.releaseDate | date:'longDate' }}</p>
+      <p>Genre: {{ movie.genre | genre }}</p>
+      <button [routerLink]="['/movies', movie.id]">View Details</button>
+    </li>
+  </ul>
+</div>
